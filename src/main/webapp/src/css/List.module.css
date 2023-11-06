@@ -20,6 +20,13 @@ th, td {
 	cursor: pointer;
 }
 
+
+#paging:link { color: black; text-decoration: none;}
+#paging:visited { color: black; text-decoration: none;}
+#paging:hover { color: red; text-decoration: underline;}
+#paging:active { color: black; text-decoration: none;}
+
+
 .subjectA:link { color: black; text-decoration: none;}
 .subjectA:visited { color: black; text-decoration: none;}
 .subjectA:hover { color: red; text-decoration: underline;}

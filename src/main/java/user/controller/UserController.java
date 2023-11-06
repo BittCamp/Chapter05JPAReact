@@ -66,11 +66,11 @@ public class UserController {
 		userService.delete(id);
 	}
 	
-	@PostMapping(path="getUserSearchList")
-	@ResponseBody
-	public List<UserDTO> getUserSearchList(@RequestParam String columnName,
-										   @RequestParam String value){
-		return userService.getUserSearchList(columnName, value);
+	@GetMapping(path="getUserSearchList")
+	public Page<UserDTO> getUserSearchList(@RequestParam String columnName,
+										   @RequestParam String keyword,
+										   @PageableDefault(page=0, size=3, sort="name", direction = Sort.Direction.DESC) Pageable pageable){
+		return userService.getUserSearchList(columnName, keyword, pageable);
 	}
 
 }

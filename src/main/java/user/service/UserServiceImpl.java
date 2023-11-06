@@ -69,7 +69,7 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public List<UserDTO> getUserSearchList(String columnName, String value) {
+	public Page<UserDTO> getUserSearchList(String columnName, String keyword , Pageable pageable) {
 		//쿼리 메소드
 		/*
 		if(columnName.equals("name")) {//select * from usertable where name like concat('%','치','%')
@@ -83,10 +83,10 @@ public class UserServiceImpl implements UserService {
 		
 		//@Query 어노테이션
 		if(columnName.equals("name")) {
-			return userDAO.getUserSearchName(value); //사용자 메소드
+			return userDAO.getUserSearchName(keyword, pageable); //사용자 메소드
 			
 		}else{
-			return userDAO.getUserSearchId(value); //사용자 메소드
+			return userDAO.getUserSearchId(keyword, pageable); //사용자 메소드
 			
 		}
 		

@@ -23,7 +23,7 @@ public interface UserService {
 
 	public void delete(String id);
 
-	public List<UserDTO> getUserSearchList(String columnName, String value);
+	public Page<UserDTO> getUserSearchList(String columnName, String keyword, Pageable pageable);
 
 }
 

@@ -21,12 +21,11 @@ const App = () => {
 
           <Route path='/user'>
             <Route path='writeForm' element={ <WriteForm /> } />
-            <Route path='list' element={ <List /> } />
+            <Route path='list/:page' element={ <List /> } />
             <Route path='updateForm'>
               <Route path=':userId' element={ <UpdateForm /> } />
             </Route>
           </Route>
-
         </Routes>
       </>
     </BrowserRouter>
